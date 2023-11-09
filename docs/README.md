@@ -1,9 +1,11 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /images/logo.png
 title: CodeRebirth | 码农知识共享 🔥
-actionText: 开始阅读 →
-actionLink: /guide/
+actions:
+  - text: 开始阅读
+    link: /guide/
+    type: primary
 features:
 - title: 温故知新
   details: 温故知新恰少年，岁月流转胜往年。卷帘晨起书阁静，古道星途智慧缘。
@@ -16,7 +18,7 @@ footer: Apache Licensed
 
 ## 在知识的星河中，我们一起沉淀、分享与成长，以互联网为广阔舞台，探索GhatGPT与AI等前沿科技的魅力🔥
 
->你好，我是小K，互联网 Java 工程师、回顾计算基础，进军机器学习领域。
+>你好，我是小K，互联网Java工程师、温故知新，砥砺前行，期待与你一起探索编程和AI。
 
 
     

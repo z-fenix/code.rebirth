@@ -1,6 +1,19 @@
-module.exports = ctx => ({
-    dest: '.site',
-    cache:".cache",
+import process from 'node:process'
+import {viteBundler} from '@vuepress/bundler-vite'
+import {defineUserConfig} from '@vuepress/cli'
+import {docsearchPlugin} from '@vuepress/plugin-docsearch'
+import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics'
+import {registerComponentsPlugin} from '@vuepress/plugin-register-components'
+import {shikiPlugin} from '@vuepress/plugin-shiki'
+import {defaultTheme} from '@vuepress/theme-default'
+import {getDirname, path} from '@vuepress/utils'
+import {head, navbarZh, sidebarZh,} from './layout'
+
+const __dirname = getDirname(import.meta.url)
+const isProd = process.env.NODE_ENV === 'production'
+export default defineUserConfig({
+    // set site base to default value
+    base: '/',
     locales: {
         '/': {
             lang: 'zh-CN',
@@ -8,86 +21,149 @@ module.exports = ctx => ({
             description: '在知识的星河中，我们一起沉淀、分享与成长，以互联网为广阔舞台，探索GhatGPT与AI等前沿科技的魅力🔥'
         }
     },
-    head: [
-        ['link', {rel: 'icon', href: `/logo.png`}],
-        ['link', {rel: 'manifest', href: '/manifest.json'}],
-        ['meta', {name: 'theme-color', content: '#3eaf7c'}],
-        ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
-        ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
-        ['meta', {name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png'}],
-        ['meta', {name: 'msapplication-TileColor', content: '#000000'}],
-        [
-            "script",
-            {
-                "data-ad-client": "ca-pub-2245427233262012",
-                async: true,
-                src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-            }
-        ]
-    ],
-    theme: '@vuepress/default',
-    themeConfig: {
-        repo: 'vuejs/vuepress',
-        editLinks: true,
-        docsDir: 'packages/docs/docs',
-        // #697 Provided by the official algolia team.
-        algolia: ctx.isProd ? ({
-            apiKey: '3a539aab83105f01761a137c61004d85',
-            indexName: 'vuepress'
-        }) : null,
-        smoothScroll: true,
-        locales: {
-            '/': {
-                label: '简体中文',
-                selectText: '选择语言',
-                ariaLabel: '选择语言',
-                editLinkText: '在 GitHub 上编辑此页',
-                lastUpdated: '上次更新',
-                nav: require('./nav/zh'),
-                sidebar: {
-                    '/notes/': getNotesBar()
-                }
-            }
-        }
-    },
-    plugins: [
-        ['@vuepress/back-to-top', true],
-        ['@vuepress/pwa', {
-            serviceWorker: true,
-            updatePopup: true
-        }],
-        ['@vuepress/medium-zoom', true],
-        ['@vuepress/google-analytics', {
-            ga: 'UA-128189152-1'
-        }],
-        ['container', {
-            type: 'vue',
-            before: '<pre class="vue-container"><code>',
-            after: '</code></pre>'
-        }],
-        ['container', {
-            type: 'upgrade',
-            before: info => `<UpgradePath title="${info}">`,
-            after: '</UpgradePath>'
-        }],
-        ['flowchart']
-    ],
-    extraWatchFiles: [
-        '.vuepress/nav/zh.js'
-    ]
-});
+    head,
+    // specify bundler via environment variable
+    bundler: viteBundler(),
 
-function getNotesBar() {
-    return [
-        {
-            title: '笔记',
-            collapsable: false,
-            children: [
-                ''
-            ]
-        }
-    ]
-}
+    // configure default theme
+    theme: defaultTheme({
+        logo: '/images/hero.png',
+        repo: 'z-fenix/code.rebirth',
+        docsDir: 'docs',
+
+        // theme-level locales config
+        locales: {
+            /**
+             * English locale config
+             *
+             * As the default locale of @vuepress/theme-default is English,
+             * we don't need to set all of the locale fields
+             */
+            // '/': {
+            //     // navbar
+            //     navbar: navbarEn,
+            //     // sidebar
+            //     sidebar: sidebarEn,
+            //     // page meta
+            //     editLinkText: 'Edit this page on GitHub',
+            // },
+
+            /**
+             * Chinese locale config
+             */
+            '/': {
+                // navbar
+                navbar: navbarZh,
+                selectLanguageName: '简体中文',
+                selectLanguageText: '选择语言',
+                selectLanguageAriaLabel: '选择语言',
+                // sidebar
+                sidebar: sidebarZh,
+                // page meta
+                editLinkText: '在 GitHub 上编辑此页',
+                lastUpdatedText: '上次更新',
+                contributorsText: '贡献者',
+                // custom containers
+                tip: '提示',
+                warning: '注意',
+                danger: '警告',
+                // 404 page
+                notFound: [
+                    '这里什么都没有',
+                    '我们怎么到这来了？',
+                    '这是一个 404 页面',
+                    '看起来我们进入了错误的链接',
+                ],
+                backToHome: '返回首页',
+                // a11y
+                openInNewWindow: '在新窗口打开',
+                toggleColorMode: '切换颜色模式',
+                toggleSidebar: '切换侧边栏',
+            },
+        },
+
+        themePlugins: {
+            // only enable git plugin in production mode
+            git: isProd,
+            // use shiki plugin in production mode instead
+            prismjs: !isProd,
+        },
+    }),
+
+    // configure markdown
+    markdown: {
+        importCode: {
+            handleImportPath: (str) =>
+                str.replace(/^@vuepress/, path.resolve(__dirname, '../../ecosystem')),
+        },
+    },
+
+    // use plugins
+    plugins: [
+        docsearchPlugin({
+            appId: '34YFD9IUQ2',
+            apiKey: '9a9058b8655746634e01071411c366b8',
+            indexName: 'vuepress',
+            searchParameters: {
+                facetFilters: ['tags:v2'],
+            },
+            locales: {
+                '/zh/': {
+                    placeholder: '搜索文档',
+                    translations: {
+                        button: {
+                            buttonText: '搜索文档',
+                            buttonAriaLabel: '搜索文档',
+                        },
+                        modal: {
+                            searchBox: {
+                                resetButtonTitle: '清除查询条件',
+                                resetButtonAriaLabel: '清除查询条件',
+                                cancelButtonText: '取消',
+                                cancelButtonAriaLabel: '取消',
+                            },
+                            startScreen: {
+                                recentSearchesTitle: '搜索历史',
+                                noRecentSearchesText: '没有搜索历史',
+                                saveRecentSearchButtonTitle: '保存至搜索历史',
+                                removeRecentSearchButtonTitle: '从搜索历史中移除',
+                                favoriteSearchesTitle: '收藏',
+                                removeFavoriteSearchButtonTitle: '从收藏中移除',
+                            },
+                            errorScreen: {
+                                titleText: '无法获取结果',
+                                helpText: '你可能需要检查你的网络连接',
+                            },
+                            footer: {
+                                selectText: '选择',
+                                navigateText: '切换',
+                                closeText: '关闭',
+                                searchByText: '搜索提供者',
+                            },
+                            noResultsScreen: {
+                                noResultsText: '无法找到相关结果',
+                                suggestedQueryText: '你可以尝试查询',
+                                reportMissingResultsText: '你认为该查询应该有结果？',
+                                reportMissingResultsLinkText: '点击反馈',
+                            },
+                        },
+                    },
+                },
+            },
+        }),
+        googleAnalyticsPlugin({
+            // we have multiple deployments, which would use different id
+            id: process.env.DOCS_GA_ID ?? '',
+        }),
+        registerComponentsPlugin({
+            componentsDir: path.resolve(__dirname, './components'),
+        }),
+        // only enable shiki plugin in production mode
+        isProd ? shikiPlugin({theme: 'dark-plus'}) : [],
+    ],
+
+})
+
 
 
 
