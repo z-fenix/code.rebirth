@@ -14,7 +14,7 @@ const isProd = process.env.NODE_ENV === 'production'
 export default defineUserConfig({
     // set site base to default value
     base: '/',
-    dest: ".site",
+    dest: "website",
     locales: {
         '/': {
             lang: 'zh-CN',

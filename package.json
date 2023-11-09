@@ -10,11 +10,11 @@
   ],
   "homepage": "https://github.com/vuejs/vuepress#readme",
   "bugs": {
-    "url": "https://github.com/vuejs/vuepress/issues"
+    "url": "https://github.com/z-fenix/code.rebirth/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vuepress.git"
+    "url": "git+https://github.com/z-fenix/code.rebirth.git"
   },
   "license": "Apache License",
   "author": "Code Rebirth",

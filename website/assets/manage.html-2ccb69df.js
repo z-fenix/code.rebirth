@@ -1,0 +1,1 @@
+import{_ as a,o as t,c,a as e,b as n}from"./app-8b21f421.js";const o={},r=e("h1",{id:"系统管理",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#系统管理","aria-hidden":"true"},"#"),n(" 系统管理")],-1),s=[r];function _(d,i){return t(),c("div",null,s)}const l=a(o,[["render",_],["__file","manage.html.vue"]]);export{l as default};
