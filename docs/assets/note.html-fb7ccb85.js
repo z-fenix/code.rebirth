@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-4f200a45","path":"/notes/lean/note.html","title":"学习随记","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"notes/lean/note.md"}');export{t as data};

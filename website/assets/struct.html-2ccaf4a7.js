@@ -1,1 +1,0 @@
-import{_ as t,o as a,c,a as e,b as r}from"./app-8b21f421.js";const s={},o=e("h1",{id:"计算机网络体系结构",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#计算机网络体系结构","aria-hidden":"true"},"#"),r(" 计算机网络体系结构")],-1),n=[o];function _(d,i){return a(),c("div",null,n)}const l=t(s,[["render",_],["__file","struct.html.vue"]]);export{l as default};

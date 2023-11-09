@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-9a726960","path":"/computer/os/","title":"操作系统 💻","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"建设中，敬请期待......","slug":"建设中-敬请期待","link":"#建设中-敬请期待","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"computer/os/index.md"}');export{e as data};

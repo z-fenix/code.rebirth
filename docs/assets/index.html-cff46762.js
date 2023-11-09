@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-146a1089","path":"/code/","title":"CodeRebirth | 编程基础 🔥","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"建设中，敬请期待......","slug":"建设中-敬请期待","link":"#建设中-敬请期待","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"code/index.md"}');export{e as data};

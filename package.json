@@ -19,8 +19,8 @@
   "license": "Apache License",
   "author": "Code Rebirth",
   "scripts": {
-    "build": "vuepress build docs -c docs/.vuepress/config.js",
-    "dev": "vuepress dev docs -c docs/.vuepress/config.js"
+    "build": "vuepress build src -c src/.vuepress/config.js",
+    "dev": "vuepress dev src -c src/.vuepress/config.js"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-beta.67",

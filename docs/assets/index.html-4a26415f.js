@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-6eded1a3","path":"/program/go/","title":"CodeRebirth | Go 🔥","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"建设中，敬请期待......","slug":"建设中-敬请期待","link":"#建设中-敬请期待","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"program/go/index.md"}');export{e as data};
