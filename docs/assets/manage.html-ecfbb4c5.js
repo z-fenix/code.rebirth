@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-39c23d44","path":"/computer/os/manage.html","title":"系统管理","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1699523893000,"contributors":[{"name":"zhangkun","email":"zk1634@163.com","commits":1}]},"filePathRelative":"computer/os/manage.md"}');export{t as data};

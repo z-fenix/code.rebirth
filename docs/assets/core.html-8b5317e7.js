@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-3e536b4a","path":"/computer/os/core.html","title":"系统内核","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1699523893000,"contributors":[{"name":"zhangkun","email":"zk1634@163.com","commits":1}]},"filePathRelative":"computer/os/core.md"}');export{e as data};
