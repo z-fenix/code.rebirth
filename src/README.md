@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.png
+heroImage: /images/hero.png
 title: CodeRebirth | 码农知识共享 🔥
 actions:
   - text: 开始阅读

@@ -1,10 +1,10 @@
 export const navbarZh = [
     {
-        text: 'FollowMe',
+        text: '👨‍💻FollowMe',
         link: '/guide/',
     },
     {
-        text: '基础知识',
+        text: '🖥️基础知识',
         children: [
             {
                 text: '操作系统',
@@ -26,7 +26,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '编程基础',
+        text: '⌨️编程基础',
         children: [
             {
                 text: '数据结构',
@@ -43,7 +43,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '编程语言',
+        text: '🔤编程语言',
         children: [
             {
                 text: 'Java',
@@ -60,7 +60,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '编程探索🌌',
+        text: '🌌编程探索',
         children: [
             {
                 text: 'AI',
@@ -76,7 +76,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '笔记📔',
+        text: '📔笔记',
         children: [
             {
                 text: '部署',
@@ -98,7 +98,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '异常记录',
+        text: '🚫异常记录',
         children: [
             {
                 text: 'Java',
@@ -111,7 +111,7 @@ export const navbarZh = [
         ],
     },
     {
-        text: '关于',
+        text: '🫰关于',
         children: [
             {
                 text: '自己',

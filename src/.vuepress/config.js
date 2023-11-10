@@ -15,6 +15,8 @@ export default defineUserConfig({
     // set site base to default value
     base: '/',
     dest: "docs",
+    temp:".temp",
+    cache:".cache",
     locales: {
         '/': {
             lang: 'zh-CN',
