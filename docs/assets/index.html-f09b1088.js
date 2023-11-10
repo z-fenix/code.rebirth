@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-21568c35","path":"/computer/compiler/","title":"编译原理 💯","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"computer/compiler/index.md"}');export{e as data};

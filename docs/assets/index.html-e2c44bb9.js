@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-f956f2a2","path":"/issue/","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":3,"title":"建设中，敬请期待......","slug":"建设中-敬请期待","link":"#建设中-敬请期待","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"issue/index.md"}');export{e as data};

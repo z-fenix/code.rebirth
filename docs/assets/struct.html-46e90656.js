@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-513b2648","path":"/computer/network/struct.html","title":"计算机网络体系结构","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"computer/network/struct.md"}');export{t as data};

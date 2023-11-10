@@ -1,1 +1,0 @@
-const t=JSON.parse('{"key":"v-74bc627b","path":"/about/","title":"CodeRebirth | About 🔥","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"about/index.md"}');export{t as data};
