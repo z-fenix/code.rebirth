@@ -1,0 +1,1 @@
+import{_ as t,o,c as a,a as e,b as r}from"./app-2f00803c.js";const c={},d=e("h1",{id:"coderebirth-about-🔥",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#coderebirth-about-🔥","aria-hidden":"true"},"#"),r(" CodeRebirth | About 🔥")],-1),n=[d];function s(i,_){return o(),a("div",null,n)}const l=t(c,[["render",s],["__file","index.html.vue"]]);export{l as default};
