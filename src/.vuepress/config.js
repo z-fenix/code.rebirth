@@ -104,9 +104,9 @@ export default defineUserConfig({
     // use plugins
     plugins: [
         docsearchPlugin({
-            appId: '34YFD9IUQ2',
-            apiKey: '9a9058b8655746634e01071411c366b8',
-            indexName: 'vuepress',
+            appId: 'XJA3CKN47H',
+            apiKey: '4bfd3b5ecaecfa77a400188bbdd30324',
+            indexName: 'z-fenixio',
             searchParameters: {
                 facetFilters: ['tags:v2'],
             },
