@@ -14,7 +14,7 @@ const isProd = process.env.NODE_ENV === 'production'
 export default defineUserConfig({
     // set site base to default value
     base: '/',
-    dest: "zfenix_cn",
+    dest: "zfenix.cn",
     temp: ".temp",
     cache: ".cache",
     locales: {
@@ -33,7 +33,7 @@ export default defineUserConfig({
         logo: '/images/hero.png',
         repo: 'z-fenix/code.rebirth',
         docsDir: 'docs',
-
+        docsBranch:"master",
         // theme-level locales config
         locales: {
             /**
@@ -63,10 +63,10 @@ export default defineUserConfig({
                 // sidebar
                 sidebar: sidebarZh,
                 // page meta
-                editLinkText: '在 GitHub 上编辑此页',
+                editLink: false,
                 lastUpdatedText: '上次更新',
-                //contributorsText: '贡献者',
-                // custom containerss
+                contributors: false,
+                // custom container
                 tip: '提示',
                 warning: '注意',
                 danger: '警告',
