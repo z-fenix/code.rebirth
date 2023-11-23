@@ -11,7 +11,7 @@ export const sidebarZh = {
         {
             text: '概述',
             children: [
-                '/computer/network/introduction.md',
+                '/computer/network/index.md',
             ],
         },
         {
@@ -51,7 +51,7 @@ export const sidebarZh = {
         {
             text: '概述',
             children: [
-                '/computer/compiler/introduction.md',
+                '/computer/compiler/index.md',
             ],
         }
     ],
