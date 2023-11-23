@@ -31,7 +31,7 @@ export const sidebarZh = {
         {
             text: '概述',
             children: [
-                '/computer/os/introduction.md',
+                '/computer/os/index.md',
             ],
         },
         {
